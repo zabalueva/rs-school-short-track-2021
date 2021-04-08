@@ -13,10 +13,11 @@
 function getSumOfDigits(n) {
   let sum = 0;
   const arr = Array.from(n.toString());
-  for (let i = 0; i <= arr.length - 1; i++) {
-    if (arr.length > 1) {
-      sum = Number(arr[i]) + sum;
-    }
+  for (let i = 0; i < arr.length; i++) {
+    sum = +arr[i] + sum;
+  }
+  if (sum.toString().length > 1) {
+    return getSumOfDigits(sum);
   }
   return sum;
 }
