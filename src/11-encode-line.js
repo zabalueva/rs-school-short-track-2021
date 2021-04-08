@@ -8,12 +8,13 @@
  * For aabbbc should return 2a3bc
  *
  */
-function encodeLine(str) {
-  const arr = Array.from(str);
+function encodeLine(/* str */) {
+  throw new Error('Not implemented');
+  /* const arr = Array.from(str);
   for (let i = 0; i < arr.length; i++) {
     arr.push('j');
   }
-  return str;
+  return str; */
 }
 
 module.exports = encodeLine;
