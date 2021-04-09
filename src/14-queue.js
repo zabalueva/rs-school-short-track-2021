@@ -14,28 +14,23 @@ const ListNode = require('../extensions/list-node');
 
 class Queue {
   get size() {
-    /* let size;
+    let size;
     const node = this.value;
     while (node !== null) {
       size += 1;
-    } */
-    return 2;
+    }
+    return size;
   }
 
   enqueue(element) {
     const newNode = new ListNode();
     newNode.value = element;
-    return this.newNode;
+    this.next = newNode;
   }
 
   dequeue() {
-    this.value = 5;
-    return this.next;
+    return this.next.value;
   }
 }
-
-const queue = new Queue();
-queue.enqueue(5);
-queue.enqueue(6);
 
 module.exports = Queue;
